@@ -730,6 +730,16 @@ body.page-how .project-card-thumb {
   overflow: hidden;
   background: #ececec;
   border: none;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+}
+
+body.page-how .project-card:hover .project-card-thumb {
+  overflow: visible;
+  transform: rotate(2deg);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 body.page-how .project-card-thumb > img {
@@ -741,18 +751,21 @@ body.page-how .project-card-thumb > img {
   border-radius: 12px;
 }
 
+/* Swap images (no overlay): only one displayed at a time */
 body.page-how .project-card-thumb--dual .project-thumb-base {
-  z-index: 0;
+  display: block;
 }
 
 body.page-how .project-card-thumb--dual .project-thumb-hover {
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  display: none;
+}
+
+body.page-how .project-card:hover .project-card-thumb--dual .project-thumb-base {
+  display: none;
 }
 
 body.page-how .project-card:hover .project-card-thumb--dual .project-thumb-hover {
-  opacity: 1;
+  display: block;
 }
 
 body.page-how .project-card-main {
