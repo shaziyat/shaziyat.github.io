@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Insights for Scorecards — Shaziya Tambawala</title>
+  <meta name="description" content="How I transformed manual scorecard calibration into a GenAI-powered workflow at RingCentral." />
+  <link rel="stylesheet" href="/portfolio/css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/portfolio/index.html">
+      <span style="font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:0.02em;">ST</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/portfolio/index.html">What</a></li>
+      <li><a href="/portfolio/how.html" class="active">How</a></li>
+      <li><a href="/portfolio/who.html">Who</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div style="padding-top:5rem;">
+        <a class="cs-back" href="/portfolio/how.html">← Selected work</a>
+      </div>
+
+      <p class="eyebrow" style="font-size:12px;font-weight:400;letter-spacing:0.02em;text-transform:none;color:var(--color-ink-3);margin-bottom:0.75rem;">
+        RingCentral · ACE · 2024–2025
+      </p>
+      <h1 style="font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;line-height:1.1;margin-bottom:2rem;">
+        AI insights for scorecards
+      </h1>
+
+      <div class="cs-meta-bar">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">End-to-end design lead</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Team</span>
+          <span class="cs-meta-value">Product, Data Science, Eng, Content Design</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Scope</span>
+          <span class="cs-meta-value">Strategy · Research · Interaction design</span>
+        </div>
+      </div>
+
+      <p class="lead">
+        Contact center managers were drowning in manual scorecard reviews — slow, biased, and impossible to scale. I led the design of a GenAI-powered calibration system that turned a human bottleneck into an automated, high-trust workflow.
+      </p>
+
+      <div class="section">
+        <h2>The problem</h2>
+        <p>ACE — RingCentral's post-call analysis tool — lets managers define scorecards to evaluate agent performance. Traditionally, every unscored call flag required manual review. As call volumes scaled, this created an unsustainable bottleneck: slow, prone to bias, and impossible to maintain at pace.</p>
+        <p>My goal was to transform scorecard calibration from a manual chore into an automated, high-trust workflow — and in doing so, leapfrog competitors while driving down cost per resolution.</p>
+      </div>
+
+      <div class="section">
+        <h2>Navigating the headwinds</h2>
+        <p>Three constraints shaped how I worked throughout this project. Executives had competing priorities, so I learned to arrive with a clear recommendation rather than a menu of options. A distributed team across Spain, India, and the US pushed me toward async-first documentation where every artifact needed to be self-explanatory enough to move decisions without a meeting. And a mid-project reduction in force eliminated my dedicated PM, putting me in direct contact with leadership far more often than planned — raising the stakes on every presentation I ran.</p>
+      </div>
+
+      <div class="section">
+        <h2>Discovery and tradeoffs</h2>
+        <p>Working closely with Data Science, I found the PRD's initial framing — a simple pass/fail scorecard evaluation — didn't hold up against real use cases. Questions were more nuanced than expected, requiring the AI to understand the manager's underlying intent.</p>
+        <p>Backend conversations surfaced two key tensions:</p>
+        <ul class="steps" style="margin-top:1.5rem;">
+          <li class="step">
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <h3>Cost vs. latency</h3>
+              <p>Evaluating an entire scorecard at once was cheaper but slower. Question-by-question was faster but more expensive. As the first AI experience in the product, minimizing cost was the priority.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3>Targeting vs. coverage</h3>
+              <p>Targeting meant filtering noise so the AI processed only high-relevance inputs. Coverage meant keeping the model fresh as customer needs shifted — especially during fast-moving seasonal promotions.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Design approach</h2>
+        <p>I explored two directions. The first followed the PRD: a scorecard-level evaluation tagging each question as "Strong" or "Needs Work." Testing revealed a critical gap — it diagnosed problems without prescribing solutions. A pass/fail grade without a lesson plan.</p>
+        <p>The second was more aspirational: a prompt-based approach that analyzed the manager's intent at the scorecard or question level. After alignment sessions with Product and Engineering, we landed on a hybrid — weekly, scorecard-level evaluations for the highest-traffic assets, balancing depth of analysis with low latency.</p>
+        <p>While the backend was in development, I used the time to modernize the legacy scorecard tables and modal components — ensuring the AI features would launch into a polished UI. I also ran "knowledge exchange" sessions with Data Science and Content Design to translate model outputs into an in-product guide: a library of high-performing question examples managers could copy directly into their scorecards.</p>
+        <p>When the model was ready, I defined precise interaction details — anchor scrolling between AI suggestions and text fields, and Accept/Undo/Dismiss actions treated as signals feeding a real-time feedback loop for model refinement. I also eliminated the manual weight calculation burden by implementing auto-balancing logic, removing the cognitive load of keeping scorecards totaled to 100%.</p>
+      </div>
+
+      <hr />
+
+      <div class="section">
+        <h2>Outcomes</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Largest user cohort by session count — habit formation confirmed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">250%</div>
+            <div class="stat-label">YoY growth for ACE: 1.2K → 4.8K customers (Q3 2024 → Q4 2025)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2–9×</div>
+            <div class="stat-label">Broad repeat-use range showing sustained, not novelty, engagement</div>
+          </div>
+        </div>
+        <p>Post-launch data confirmed the feature had become a daily workflow staple. Consistent scorecard scores paired with faster iteration cycles meant quality and velocity improved together — without adding headcount.</p>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">GenAI design</span>
+        <span class="tag">0-to-1</span>
+        <span class="tag">Cross-functional leadership</span>
+        <span class="tag">B2B SaaS</span>
+        <span class="tag">AI feedback loops</span>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:4rem;padding-top:2rem;border-top:0.5px solid var(--color-border);">
+        <a class="cs-back" href="/portfolio/how.html">← All work</a>
+        <a class="btn" href="call-summary-templates.html">Next project →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-copy">© 2026 Shaziya Tambawala &nbsp;·&nbsp; No developers were harmed in the making of this website.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
