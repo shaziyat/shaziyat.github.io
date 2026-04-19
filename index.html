@@ -3,188 +3,512 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaziya Tambawala — Designer</title>
+  <title>Shaziya Tambawala - Designer</title>
   <meta name="description" content="Research-driven designer with 9+ years experience scaling enterprise SaaS tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Miriam+Libre:ital,wght@0,400;0,700&family=Gloock:ital,wght@0,400&family=Kaisei+Tokumin:ital,wght@0,700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
   <link rel="stylesheet" href="/portfolio/css/style.css" />
   <style>
-    .hero {
+    /* Home — aligned with Squarespace live site */
+    body.page-home {
+      --home-ink: #3d3d3d;
+      --home-ink-2: #616161;
+      --home-ink-3: #888888;
+      --home-paper: #ffffff;
+      --home-max: 1280px;
+      --home-pad-x: clamp(1.25rem, 6vw, 5.5rem);
+      font-family: Karla, system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--home-ink-2);
+      background: var(--home-paper);
+    }
+
+    body.page-home .page-home-inner {
+      max-width: var(--home-max);
+      margin: 0 auto;
+      padding: 0 var(--home-pad-x) 4rem;
+    }
+
+    body.page-home nav {
+      background: var(--home-paper);
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+    }
+
+    body.page-home .nav-links a {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      font-family: Chivo, sans-serif;
+      font-weight: 400;
+    }
+
+    /* Page banner — WHAT */
+    .home-page-banner {
+      text-align: center;
+      margin-top: 5.5vh;
+      margin-bottom: 7.5vh;
+      padding: 0 var(--home-pad-x);
+    }
+
+    .home-page-banner h1 {
+      font-family: Gloock, Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--home-ink);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    /* Hero — 5 / 12 + 7 / 12 */
+    .home-hero-grid {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 4rem;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: start;
+      margin-bottom: clamp(3rem, 8vw, 5.5rem);
+    }
+
+    .home-hero-photo {
+      position: relative;
+      width: 100%;
+      max-width: 702px;
+      margin: 0 auto;
+    }
+
+    .home-hero-photo::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .home-hero-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .home-hero-copy h1 {
+      font-family: Gloock, Georgia, serif;
+      font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+      font-weight: 400;
+      line-height: 1;
+      color: var(--home-ink);
+      margin: 0 0 0.35em;
+      white-space: pre-wrap;
+    }
+
+    .home-hero-copy h2 {
+      font-family: Gloock, Georgia, serif;
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--home-ink);
+      margin: 0 0 0.5em;
+      white-space: pre-wrap;
+    }
+
+    .home-meta {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--home-ink-3);
+      margin: 0 0 1rem;
+      white-space: pre-wrap;
+    }
+
+    .home-meta strong { font-weight: 700; color: var(--home-ink); }
+
+    .home-lede {
+      font-family: Karla, sans-serif;
+      font-size: 19px;
+      line-height: 1.25;
+      font-weight: 400;
+      color: var(--home-ink-2);
+      margin: 0 0 1.5rem;
+      white-space: pre-wrap;
+    }
+
+    .home-lede a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .home-lede a:hover { opacity: 0.75; }
+
+    .home-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
       align-items: center;
-      padding: 5rem 0 4rem;
-      border-bottom: 0.5px solid var(--color-border);
     }
-    .hero-photo { display: flex; align-items: center; justify-content: center; }
-    .hero-photo img {
-      width: 280px; height: 280px;
+
+    .home-btns a {
+      font-family: Chivo, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--home-ink);
+      background: transparent;
+      border: none;
+      padding: 0.35rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, opacity 0.15s;
+    }
+
+    .home-btns a.home-btn-resume {
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+    }
+
+    .home-btns a:hover {
+      border-bottom-color: var(--home-ink);
+      opacity: 0.85;
+    }
+
+    /* Three columns */
+    .home-spacer-lg {
+      height: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .home-three-col {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .home-col h1 {
+      font-family: Gloock, Georgia, serif;
+      font-size: clamp(1.35rem, 2vw, 1.65rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--home-ink);
+      margin: 0 0 0.75rem;
+      white-space: pre-wrap;
+    }
+
+    .home-col h3 {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 400;
+      color: var(--home-ink);
+      margin: 1rem 0 0.35rem;
+      white-space: pre-wrap;
+    }
+
+    .home-col h3:first-of-type { margin-top: 0; }
+
+    .home-col p {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--home-ink-2);
+      margin: 0 0 0.75rem;
+      white-space: pre-wrap;
+    }
+
+    .home-col a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .home-col a:hover { opacity: 0.75; }
+
+    /* Recent experience header row */
+    .home-recent-head {
+      display: grid;
+      grid-template-columns: minmax(0, 10fr) minmax(0, 2fr);
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .home-recent-head h1 {
+      font-family: Gloock, Georgia, serif;
+      font-size: clamp(1.35rem, 2vw, 1.65rem);
+      font-weight: 400;
+      color: var(--home-ink);
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .home-recent-resume {
+      justify-self: end;
+      text-align: center;
+    }
+
+    .home-recent-resume a {
+      font-family: Chivo, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      color: var(--home-ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .home-recent-resume a:hover { border-bottom-color: var(--home-ink); }
+
+    /* Experience 4-up */
+    .home-exp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(1rem, 2.5vw, 2rem);
+    }
+
+    .home-exp-card figure {
+      margin: 0 0 0.75rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-exp-card figure::before {
+      content: "";
+      display: block;
+      padding-bottom: 74.92%;
+    }
+
+    .home-exp-card figure img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .home-exp-card h3 {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--home-ink);
+      margin: 0 0 0.35rem;
+      white-space: pre-wrap;
+    }
+
+    .home-exp-card p {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--home-ink-2);
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    /* Footer */
+    body.page-home footer.home-footer {
+      margin-top: clamp(3rem, 8vw, 6rem);
+      padding: 2.5rem var(--home-pad-x) 3rem;
+      border-top: 0.5px solid rgba(0,0,0,0.08);
+      background: var(--home-paper);
+    }
+
+    .home-footer-inner {
+      max-width: var(--home-max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .home-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .home-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      object-fit: cover; object-position: center top;
+      background: var(--home-ink);
+      color: #fff;
+      transition: opacity 0.15s;
     }
-    .hero-photo-placeholder {
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      background: var(--color-surface);
-      border: 0.5px dashed var(--color-border-strong);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      font-size: 13px; color: var(--color-ink-3); text-align: center; line-height: 1.6;
+
+    .home-social a:hover { opacity: 0.8; }
+
+    .home-social svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
-    .hero-eyebrow {
-      font-family: var(--font-sans);
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: #a855a0; margin-bottom: 1rem;
+
+    .home-footer-copy {
+      font-family: Karla, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--home-ink-2);
+      text-align: right;
+      margin: 0;
+      line-height: 1.5;
     }
-    .hero-h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 5vw, 4rem);
-      font-weight: 400; line-height: 1.05;
-      color: var(--color-ink); margin-bottom: 1.25rem;
+
+    @media (max-width: 900px) {
+      .home-three-col { grid-template-columns: 1fr; }
+      .home-exp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-recent-head {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+      .home-recent-resume { justify-self: start; }
     }
-    .hero-meta {
-      font-size: 14px; font-weight: 300;
-      color: var(--color-ink-3); margin-bottom: 1.25rem;
-    }
-    .hero-body {
-      font-size: 1rem; line-height: 1.75;
-      color: var(--color-ink-2); font-weight: 300;
-      margin-bottom: 2rem; max-width: 520px;
-    }
-    .hero-body a { color: #a855a0; border-bottom: 1px solid rgba(168,85,160,0.3); }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-btns .btn {
-      border-radius: 4px;
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 10px 22px;
-      border-color: #a855a0; color: #a855a0;
-    }
-    .hero-btns .btn:hover { background: #a855a0; color: white; border-color: #a855a0; }
-    @media (max-width: 720px) {
-      .hero { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-photo { justify-content: flex-start; }
-      .hero-photo img, .hero-photo-placeholder { width: 200px; height: 200px; }
+
+    @media (max-width: 640px) {
+      .home-hero-grid { grid-template-columns: 1fr; }
+      .home-footer-inner {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .home-footer-copy { text-align: left; }
+      .home-exp-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-<body>
+<body class="page-home">
 
   <nav>
     <a class="nav-logo" href="/portfolio/index.html">
       <img src="/portfolio/assets/logo.png" alt="Shaziya Tambawala" />
     </a>
     <ul class="nav-links">
-      <li><a href="/portfolio/index.html" class="active">What</a></li>
-      <li><a href="/portfolio/how.html">How</a></li>
-      <li><a href="/portfolio/who.html">Who</a></li>
+      <li><a href="/portfolio/index.html" class="active">WHAT</a></li>
+      <li><a href="/portfolio/how.html">HOW</a></li>
+      <li><a href="/portfolio/who.html">WHO</a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="container">
+    <header class="home-page-banner">
+      <h1>WHAT</h1>
+    </header>
 
-      <div class="hero">
-        <div class="hero-photo">
+    <div class="page-home-inner">
+
+      <section class="home-hero-grid" aria-label="Introduction">
+        <div class="home-hero-photo">
           <img src="/portfolio/assets/shaziya.png" alt="Shaziya Tambawala" />
         </div>
-        <div>
-          <p class="hero-eyebrow">UX and design strategy</p>
-          <h1 class="hero-h1">Heyo, I'm Shaziya.</h1>
-          <p class="hero-meta">🔊 shah · zee · yah &nbsp;|&nbsp; aka purplecoppertalk &nbsp;|&nbsp; ♀ she/her &nbsp;|&nbsp; 📍 Bay Area, CA</p>
-          <p class="hero-body">
-            Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I'm a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I'm currently exploring AI communication experiences at <a href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank">RingCentral</a>.
-          </p>
-          <div class="hero-btns">
-            <a href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" class="btn" target="_blank">Résumé</a>
-            <a href="https://linkedin.com/in/shaztam" class="btn" target="_blank">LinkedIn</a>
-            <a href="mailto:hello@shaziyatambawala.com" class="btn">Email</a>
+        <div class="home-hero-copy">
+          <h1>UX AND DESIGN STRATEGY</h1>
+          <h2>Heyo, I’m Shaziya.</h2>
+          <p class="home-meta">🔊 shah • zee • yah  |  aka purplecoppertalk  |  <strong>♀ </strong>she/her  |  📍 Bay Area, CA</p>
+          <h3 class="home-lede">Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I’m a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I’m currently exploring AI communication experiences at <a href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank" rel="noopener noreferrer">RingCentral</a>.</h3>
+          <div class="home-btns">
+            <a class="home-btn-resume" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
+            <a href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="mailto:hello@shaziyatambawala.com">EMAIL</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="section" style="margin-top:3.5rem;">
-        <h2>Superpowers</h2>
-        <div class="superpowers">
-          <div class="superpower">
-            <h3>Creative facilitator</h3>
-            <p>Distilling concepts into digestible chunks while understanding system-wide connections.</p>
-          </div>
-          <div class="superpower">
-            <h3>Thoughtful doer</h3>
-            <p>Transforming discussions into plans and championing a collaborative culture.</p>
-          </div>
-          <div class="superpower">
-            <h3>Strategic initiator</h3>
-            <p>Challenging established thinking and developing new approaches across multiple stakeholder levels with researched options.</p>
-          </div>
+      <div class="home-spacer-lg" aria-hidden="true"></div>
+
+      <section class="home-three-col" aria-label="Highlights">
+        <div class="home-col">
+          <h1>SUPERPOWERS</h1>
+          <h3><strong>Creative facilitator</strong></h3>
+          <p>Distilling concepts into digestible chunks while understanding system-wide connections.</p>
+          <h3><strong>Thoughtful doer</strong></h3>
+          <p>Transforming discussions into plans and championing a collaborative culture.</p>
+          <h3><strong>Strategic initiator</strong></h3>
+          <p>Challenging established thinking and developing new approaches across multiple stakeholder levels with&nbsp;researched options.</p>
         </div>
-      </div>
-
-      <hr />
-
-      <div class="section">
-        <h2>Most proud of</h2>
-        <div class="experience-list">
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>U.S. Patent</h3>
-              <p>Designed archiving experiences for Confluence Cloud and co-invented <a href="https://patents.google.com/patent/US12547584B2/en" target="_blank" style="border-bottom:1px solid var(--color-border-strong);">this patent</a>.</p>
-            </div>
-          </div>
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>TEAM '23 talk</h3>
-              <p>Spoke about <a href="https://events.atlassian.com/team23/v/s-1425372" target="_blank" style="border-bottom:1px solid var(--color-border-strong);">a UX-driven approach</a> for product champions to promote usage in their teams.</p>
-            </div>
-          </div>
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>Article on design leadership</h3>
-              <p>Wrote <a href="https://medium.com/designing-atlassian/think-introverted-act-extroverted-976e3164f3a0" target="_blank" style="border-bottom:1px solid var(--color-border-strong);">Think introverted; act extroverted</a> — became Medium staff's picks of the month.</p>
-            </div>
-          </div>
+        <div class="home-col">
+          <h1>MOST PROUD OF</h1>
+          <h3><strong>U.S. Patent </strong></h3>
+          <p>Designed archiving experiences for Confluence Cloud and co-invented <a href="https://patents.google.com/patent/US12547584B2/en" target="_blank" rel="noopener noreferrer">this patent</a>.</p>
+          <h3><strong>TEAM ‘23 talk</strong></h3>
+          <p>Spoke about <a href="https://events.atlassian.com/team23/v/s-1425372" target="_blank" rel="noopener noreferrer">a UX-driven approach </a>for product champions to promote usage in their teams.</p>
+          <h3><strong>Article on design leadership</strong></h3>
+          <p>Wrote <a href="https://medium.com/designing-atlassian/think-introverted-act-extroverted-976e3164f3a0" target="_blank" rel="noopener noreferrer">Think introverted; act extroverted</a> on how to be a design leader and still be yourself. It became <a href="https://blog.medium.com/what-were-reading-breaking-the-ice-understanding-internet-brain-and-an-expert-s-advice-on-222081f7b6a5" target="_blank" rel="noopener noreferrer">Medium staff’s picks of the month</a>.</p>
         </div>
-      </div>
-
-      <hr />
-
-      <div class="section">
-        <h2>Recent experience</h2>
-        <div class="experience-list">
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>RingCentral</h3>
-              <p>Sharpened prototyping and storytelling abilities while diving into AI communication experiences.</p>
-            </div>
-          </div>
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>Atlassian</h3>
-              <p>Led design for 0-to-1 projects, adding program delivery and designing for emerging technology to my skill set.</p>
-            </div>
-          </div>
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>Cisco</h3>
-              <p>Working on the cloud services team, honed capabilities in user research and product management.</p>
-            </div>
-          </div>
-          <div class="exp-item">
-            <div class="exp-body">
-              <h3>General Electric</h3>
-              <p>Supported digital transformation projects, focused on the production mail industry.</p>
-            </div>
-          </div>
+        <div class="home-col">
+          <h1>THREADS IN MY CAREER</h1>
+          <h3><strong>Startups within enterprises</strong></h3>
+          <p>4 out of 5 long-term gigs have been for young, lean teams within larger enterprises.</p>
+          <h3><strong>Multitude of domains</strong></h3>
+          <p>Including e-commerce, industrial IoT, cloud management, and work management.</p>
+          <h3><strong>Web-based legacy software</strong></h3>
+          <p>Assessing risk and understanding users’ mental models is critical to implementation.</p>
         </div>
-      </div>
+      </section>
+
+      <div class="home-spacer-lg" aria-hidden="true"></div>
+
+      <section class="home-recent-head" aria-label="Recent experience">
+        <h1>RECENT EXPERIENCE</h1>
+        <div class="home-recent-resume">
+          <a href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
+        </div>
+      </section>
+
+      <section class="home-exp-grid" aria-label="Employers">
+        <article class="home-exp-card">
+          <figure>
+            <img src="/portfolio/assets/ringcentral.jpg" alt="" />
+          </figure>
+          <h3>RingCentral</h3>
+          <p>I sharpened my prototyping and storytelling abilities while diving into the world of AI communication experiences.</p>
+        </article>
+        <article class="home-exp-card">
+          <figure>
+            <img src="/portfolio/assets/atlassian.png" alt="" />
+          </figure>
+          <h3>Atlassian</h3>
+          <p>Leading design for 0-1 projects, I’ve added program delivery and designing for emerging technology to my skillset.</p>
+        </article>
+        <article class="home-exp-card">
+          <figure>
+            <img src="/portfolio/assets/cisco.png" alt="" />
+          </figure>
+          <h3>Cisco</h3>
+          <p>Working on the cloud services team, I honed my capabilities at user research and product management. </p>
+        </article>
+        <article class="home-exp-card">
+          <figure>
+            <img src="/portfolio/assets/gedigital.png" alt="" />
+          </figure>
+          <h3>General Electric (GE)</h3>
+          <p>I supported digital transformation projects, focussing on the production mail industry.</p>
+        </article>
+      </section>
 
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p class="footer-copy">© 2026 Shaziya Tambawala &nbsp;·&nbsp; No developers were harmed in the making of this website.</p>
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="home-social">
+        <a href="mailto:hello@shaziyatambawala.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shaztam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/PurpleCopperTalk" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <p class="home-footer-copy"><em>© 2026 Shaziya Tambawala&nbsp; |  No developers were harmed in the making of this website.</em></p>
     </div>
   </footer>
 
