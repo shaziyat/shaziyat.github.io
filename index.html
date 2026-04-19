@@ -7,7 +7,7 @@
   <meta name="description" content="Research-driven designer with 9+ years experience scaling enterprise SaaS tools." />
   <link rel="stylesheet" href="/portfolio/css/style.css" />
   <style>
-    /* Home */
+    /* Home — weights only regular (400) or demi (600); no lighter/heavier */
     body.page-home {
       --home-accent: hsl(292, 50%, 64%);
       --home-text: #000000;
@@ -15,14 +15,29 @@
       --home-max: 1280px;
       --home-pad-x: clamp(1.25rem, 6vw, 5.5rem);
       --home-btn-border: rgb(199, 199, 199);
-      --home-btn-bg: rgb(255, 253, 250);
+      --home-btn-bg: #ffffff;
+      --home-edge-spacing: clamp(3rem, 8vw, 6rem);
+      --font-weight-regular: 400;
+      --font-weight-demi: 600;
+      /* Heading 1 — section titles (reuse .heading-1 or .home-section-title) */
+      --heading-1-size: 20px;
+      --hero-name-size: 40px;
       --font-avenir: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-family: var(--font-avenir);
       font-size: 16px;
-      font-weight: 400;
+      font-weight: var(--font-weight-regular);
       line-height: 1.75;
       color: var(--home-text);
-      background: var(--home-paper);
+      background: #ffffff;
+    }
+
+    body.page-home strong {
+      font-weight: var(--font-weight-demi);
+    }
+
+    /* Override global style.css p { font-weight: 300 } on this page */
+    body.page-home p {
+      font-weight: var(--font-weight-regular);
     }
 
     body.page-home .page-home-align {
@@ -34,7 +49,7 @@
     }
 
     body.page-home nav {
-      background: var(--home-paper);
+      background: #ffffff;
       border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
       padding: 0;
     }
@@ -43,15 +58,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
       height: var(--nav-h);
+    }
+
+    body.page-home .nav-logo {
+      flex-shrink: 0;
+      margin-right: auto;
+    }
+
+    body.page-home .nav-links {
+      margin-left: auto;
     }
 
     body.page-home .nav-links a {
       text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.06em;
+      font-size: 16px;
+      letter-spacing: 0.04em;
       font-family: var(--font-avenir);
-      font-weight: 500;
+      font-weight: var(--font-weight-demi);
       color: var(--home-accent);
       text-decoration: none;
     }
@@ -64,15 +89,21 @@
       color: var(--home-accent);
     }
 
+    body.page-home main {
+      background: #ffffff;
+    }
+
     body.page-home .page-home-inner {
+      padding-top: var(--home-edge-spacing);
       padding-bottom: 4rem;
     }
 
-    /* Section titles — 24px accent */
-    .home-section-title {
+    /* Heading 1 — matches --heading-1-size + demi */
+    .home-section-title,
+    .heading-1 {
       font-family: var(--font-avenir);
-      font-size: 24px;
-      font-weight: 600;
+      font-size: var(--heading-1-size);
+      font-weight: var(--font-weight-demi);
       line-height: 1.25;
       color: var(--home-accent);
       margin: 0 0 0.35em;
@@ -86,7 +117,7 @@
       gap: clamp(1.5rem, 4vw, 3rem);
       align-items: start;
       margin-bottom: clamp(3rem, 8vw, 5.5rem);
-      padding-top: clamp(1.5rem, 4vh, 3rem);
+      padding-top: 0;
     }
 
     .home-hero-photo {
@@ -113,9 +144,9 @@
 
     .home-hero-copy h2 {
       font-family: var(--font-avenir);
-      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-      font-weight: 500;
-      line-height: 1.2;
+      font-size: var(--hero-name-size);
+      font-weight: var(--font-weight-demi);
+      line-height: 1.15;
       color: var(--home-text);
       margin: 0 0 0.5em;
       white-space: pre-wrap;
@@ -125,13 +156,14 @@
       font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
       margin: 0 0 1rem;
       white-space: pre-wrap;
     }
 
     .home-meta strong {
-      font-weight: 700;
+      font-weight: var(--font-weight-demi);
       color: var(--home-text);
     }
 
@@ -139,7 +171,7 @@
       font-family: var(--font-avenir);
       font-size: 19px;
       line-height: 1.35;
-      font-weight: 400;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
       margin: 0 0 1.5rem;
       white-space: pre-wrap;
@@ -160,7 +192,7 @@
     .home-btns {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem 1rem;
+      gap: 0.5rem 0.65rem;
       align-items: center;
     }
 
@@ -168,31 +200,22 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
       font-family: var(--font-avenir);
-      font-size: 18px;
-      line-height: 1.4;
-      font-weight: 400;
-      /* Match andrewnelson.design hero “About” — dark text on bordered tile */
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: var(--font-weight-regular);
       color: rgb(52, 51, 50);
       text-decoration: none;
       border: 1px solid var(--home-btn-border);
       background-color: var(--home-btn-bg);
       border-radius: 6px;
-      padding: 0.65rem 1.15rem;
+      padding: 0.35rem 0.65rem;
       transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
     .home-pill-btn:hover {
-      background-color: #fff;
+      background-color: #ffffff;
       border-color: #b0b0b0;
-    }
-
-    .home-pill-btn svg {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      fill: currentColor;
     }
 
     .home-spacer-lg {
@@ -210,7 +233,7 @@
       font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.4;
-      font-weight: 400;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
       margin: 1rem 0 0.35rem;
       white-space: pre-wrap;
@@ -224,6 +247,7 @@
       font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
       margin: 0 0 0.75rem;
       white-space: pre-wrap;
@@ -242,8 +266,8 @@
     }
 
     .home-recent-resume .home-pill-btn {
-      font-size: 16px;
-      padding: 0.5rem 1rem;
+      font-size: 14px;
+      padding: 0.35rem 0.65rem;
     }
 
     .home-exp-grid {
@@ -277,7 +301,7 @@
     .home-exp-card h3 {
       font-family: var(--font-avenir);
       font-size: 16px;
-      font-weight: 700;
+      font-weight: var(--font-weight-demi);
       color: var(--home-text);
       margin: 0 0 0.35rem;
       white-space: pre-wrap;
@@ -287,59 +311,30 @@
       font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
       margin: 0;
       white-space: pre-wrap;
     }
 
     body.page-home footer.home-footer {
-      margin-top: clamp(3rem, 8vw, 6rem);
+      margin-top: var(--home-edge-spacing);
       padding: 2.5rem 0 3rem;
       border-top: 0.5px solid rgba(0, 0, 0, 0.08);
-      background: var(--home-paper);
+      background: #ffffff;
     }
 
     .home-footer-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .home-social {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .home-social a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--home-text);
-      color: #fff;
-      transition: opacity 0.15s;
-    }
-
-    .home-social a:hover {
-      opacity: 0.8;
-    }
-
-    .home-social svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
+      text-align: center;
     }
 
     .home-footer-copy {
       font-family: var(--font-avenir);
       font-size: 14px;
       font-style: italic;
+      font-weight: var(--font-weight-regular);
       color: var(--home-text);
-      text-align: right;
+      text-align: center;
       margin: 0;
       line-height: 1.5;
     }
@@ -363,13 +358,6 @@
     @media (max-width: 640px) {
       .home-hero-grid {
         grid-template-columns: 1fr;
-      }
-      .home-footer-inner {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
-      .home-footer-copy {
-        text-align: left;
       }
       .home-exp-grid {
         grid-template-columns: 1fr;
@@ -400,20 +388,14 @@
           <img src="/portfolio/assets/shaziya.png" alt="Shaziya Tambawala" />
         </div>
         <div class="home-hero-copy">
-          <h1 class="home-section-title">UX AND DESIGN STRATEGY</h1>
+          <h1 class="home-section-title heading-1">UX AND DESIGN STRATEGY</h1>
           <h2>Heyo, I’m Shaziya.</h2>
           <p class="home-meta">🔊 shah • zee • yah  |  aka purplecoppertalk  |  <strong>♀ </strong>she/her  |  📍 Bay Area, CA</p>
           <h3 class="home-lede">Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I’m a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I’m currently exploring AI communication experiences at <a class="home-text-link" href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank" rel="noopener noreferrer">RingCentral</a>.</h3>
           <div class="home-btns">
             <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
-            <a class="home-pill-btn" href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
-            <a class="home-pill-btn" href="mailto:hello@shaziyatambawala.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              Email
-            </a>
+            <a class="home-pill-btn" href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="home-pill-btn" href="mailto:hello@shaziyatambawala.com">Email</a>
           </div>
         </div>
       </section>
@@ -422,7 +404,7 @@
 
       <section class="home-three-col" aria-label="Highlights">
         <div class="home-col">
-          <h1 class="home-section-title">SUPERPOWERS</h1>
+          <h1 class="home-section-title heading-1">SUPERPOWERS</h1>
           <h3><strong>Creative facilitator</strong></h3>
           <p>Distilling concepts into digestible chunks while understanding system-wide connections.</p>
           <h3><strong>Thoughtful doer</strong></h3>
@@ -431,7 +413,7 @@
           <p>Challenging established thinking and developing new approaches across multiple stakeholder levels with&nbsp;researched options.</p>
         </div>
         <div class="home-col">
-          <h1 class="home-section-title">MOST PROUD OF</h1>
+          <h1 class="home-section-title heading-1">MOST PROUD OF</h1>
           <h3><strong>U.S. Patent </strong></h3>
           <p>Designed archiving experiences for Confluence Cloud and co-invented <a class="home-text-link" href="https://patents.google.com/patent/US12547584B2/en" target="_blank" rel="noopener noreferrer">this patent</a>.</p>
           <h3><strong>TEAM ‘23 talk</strong></h3>
@@ -440,7 +422,7 @@
           <p>Wrote <a class="home-text-link" href="https://medium.com/designing-atlassian/think-introverted-act-extroverted-976e3164f3a0" target="_blank" rel="noopener noreferrer">Think introverted; act extroverted</a> on how to be a design leader and still be yourself. It became <a class="home-text-link" href="https://blog.medium.com/what-were-reading-breaking-the-ice-understanding-internet-brain-and-an-expert-s-advice-on-222081f7b6a5" target="_blank" rel="noopener noreferrer">Medium staff’s picks of the month</a>.</p>
         </div>
         <div class="home-col">
-          <h1 class="home-section-title">THREADS IN MY CAREER</h1>
+          <h1 class="home-section-title heading-1">THREADS IN MY CAREER</h1>
           <h3><strong>Startups within enterprises</strong></h3>
           <p>4 out of 5 long-term gigs have been for young, lean teams within larger enterprises.</p>
           <h3><strong>Multitude of domains</strong></h3>
@@ -453,7 +435,7 @@
       <div class="home-spacer-lg" aria-hidden="true"></div>
 
       <section class="home-recent-head" aria-label="Recent experience">
-        <h1 class="home-section-title">RECENT EXPERIENCE</h1>
+        <h1 class="home-section-title heading-1">RECENT EXPERIENCE</h1>
         <div class="home-recent-resume">
           <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
         </div>
@@ -495,17 +477,6 @@
 
   <footer class="home-footer">
     <div class="page-home-align home-footer-inner">
-      <div class="home-social">
-        <a href="mailto:hello@shaziyatambawala.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/shaztam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/PurpleCopperTalk" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-      </div>
       <p class="home-footer-copy"><em>© 2026 Shaziya Tambawala&nbsp; |  No developers were harmed in the making of this website.</em></p>
     </div>
   </footer>
