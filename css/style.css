@@ -497,17 +497,25 @@ body.site-portfolio hr {
 
 body.site-portfolio footer {
   margin-top: var(--site-edge-spacing);
-  padding: 0 0 3rem;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
-  background: #ffffff;
+  padding: 2.75rem 0;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.06);
+  background: rgb(245, 245, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-body.site-portfolio footer .container {
+body.site-portfolio footer .container,
+body.site-portfolio footer .site-shell {
   display: block;
   text-align: center;
   max-width: var(--site-max);
+  margin: 0 auto;
   padding-left: var(--site-pad-x);
   padding-right: var(--site-pad-x);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 body.site-portfolio .footer-copy,
@@ -599,7 +607,7 @@ body.page-home .home-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(1.25rem, 3vw, 2.5rem);
-  align-items: start;
+  align-items: center;
   margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
   padding-top: 0;
 }
@@ -626,13 +634,18 @@ body.page-home .home-hero-photo img {
   object-position: 50% 50%;
 }
 
+/* Hero stack: equal gaps (UX→Heyo and Heyo→meta); rem avoids huge em-based gaps on large h2 */
+body.page-home .home-hero-copy > h1.home-section-title {
+  margin-bottom: 0.35rem;
+}
+
 body.page-home .home-hero-copy h2 {
   font-family: var(--font-avenir);
   font-size: var(--hero-name-size);
   font-weight: var(--font-weight-demi);
   line-height: normal;
   color: var(--home-text);
-  margin: 0 0 0.45em;
+  margin: 0 0 0.35rem;
   white-space: pre-wrap;
 }
 
@@ -803,6 +816,7 @@ body.page-home .home-footer-inner {
 @media (max-width: 640px) {
   body.page-home .home-hero-grid {
     grid-template-columns: 1fr;
+    align-items: start;
   }
   body.page-home .home-exp-grid {
     grid-template-columns: 1fr;
