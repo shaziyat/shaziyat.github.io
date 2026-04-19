@@ -589,19 +589,33 @@ body.site-portfolio .who-links {
   margin-top: 0.5rem;
 }
 
-body.site-portfolio .who-designer-grid,
+body.site-portfolio .who-designer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+body.site-portfolio .who-designer-copy {
+  max-width: 42rem;
+  width: 100%;
+  text-align: center;
+}
+
+body.site-portfolio .who-designer-copy .who-links {
+  justify-content: center;
+}
+
 body.site-portfolio .who-fth-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: 1fr 3fr;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: start;
 }
 
-body.site-portfolio .who-fth-grid {
-  grid-template-columns: 1fr 3fr;
-}
-
 body.site-portfolio .who-designer-visual {
+  width: 100%;
+  max-width: min(36rem, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -656,11 +670,11 @@ body.site-portfolio .who-speaker-cols {
 }
 
 body.site-portfolio .who-speaker .who-section-title {
-  margin-bottom: 1.25rem;
+  margin-bottom: clamp(1rem, 2.5vw, 1.25rem);
+  text-align: center;
 }
 
 @media (max-width: 840px) {
-  body.site-portfolio .who-designer-grid,
   body.site-portfolio .who-fth-grid,
   body.site-portfolio .who-speaker-cols {
     grid-template-columns: 1fr;
