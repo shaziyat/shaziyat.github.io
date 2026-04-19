@@ -616,7 +616,7 @@ body.page-home .home-hero-grid {
 body.page-home .home-hero-photo {
   position: relative;
   width: 100%;
-  max-width: calc(702px * 0.75);
+  max-width: 702px;
   margin: 0 auto;
   aspect-ratio: 548 / 502;
 }
@@ -628,6 +628,8 @@ body.page-home .home-hero-photo img {
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+  transform: scale(0.75);
+  transform-origin: center center;
 }
 
 /* Hero stack: equal gaps (UX→Heyo and Heyo→meta); rem avoids huge em-based gaps on large h2 */
