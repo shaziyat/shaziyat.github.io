@@ -726,7 +726,7 @@ body.page-how .project-card:hover {
 }
 
 body.page-how .project-card-thumb {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2 / 1;
   width: 100%;
   min-width: 0;
   border-radius: 12px;
@@ -738,11 +738,16 @@ body.page-how .project-card-main {
   min-width: 0;
 }
 
+/* Match WHAT page .home-section-title / .heading-1 */
 body.page-how .project-meta {
+  font-family: var(--font-avenir);
+  font-size: max(10px, 16px);
+  font-weight: var(--font-weight-demi);
+  line-height: normal;
+  letter-spacing: 0.05em;
   color: #000000;
-  font-size: max(10px, 12px);
-  font-weight: var(--font-weight-regular);
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.35em;
+  white-space: pre-wrap;
 }
 
 body.page-how .project-title {
@@ -759,30 +764,45 @@ body.page-how .project-desc {
   margin: 0;
 }
 
+/* Match WHAT .home-pill-btn; width grows on row hover as arrow reveals */
 body.page-how .project-case-study {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  gap: 0;
   margin-top: 1rem;
   padding: 8px 18px;
-  border: 1px solid #000000;
+  border: 1px solid var(--site-accent);
   border-radius: 4px;
   font-family: var(--font-avenir);
   font-size: max(10px, 14px);
   font-weight: var(--font-weight-regular);
-  color: #000000;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  color: var(--site-accent);
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, gap 0.22s ease;
+}
+
+body.page-how .project-card:hover .project-case-study {
+  background: var(--site-accent);
+  color: #ffffff;
+  border-color: var(--site-accent);
+  gap: 0.4rem;
 }
 
 body.page-how .project-case-study-arrow {
   display: inline-block;
+  max-width: 0;
+  overflow: hidden;
   opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  transition: max-width 0.22s ease, opacity 0.2s ease;
 }
 
 body.page-how .project-card:hover .project-case-study-arrow {
+  max-width: 1.5em;
   opacity: 1;
-  transform: translateX(0);
 }
 
 body.site-portfolio h2 {
