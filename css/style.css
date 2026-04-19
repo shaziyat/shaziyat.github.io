@@ -598,15 +598,33 @@ body.site-portfolio .who-fth-grid {
 }
 
 body.site-portfolio .who-fth-grid {
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: 1fr 3fr;
 }
 
-body.site-portfolio .who-designer-visual img,
+body.site-portfolio .who-designer-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+body.site-portfolio .who-designer-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(0.75);
+  transform-origin: center center;
+}
+
 body.site-portfolio .who-fth-visual img,
 body.site-portfolio .who-speaker-visual img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+body.site-portfolio .who-speaker-visual {
+  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 body.site-portfolio .who-talk-heading {
@@ -620,12 +638,12 @@ body.site-portfolio a.who-talk-title {
   font-family: var(--font-avenir);
   font-weight: var(--font-weight-demi);
   font-size: 1.1rem;
-  color: var(--color-ink);
+  color: hsl(292, 50%, 64%);
   text-decoration: none;
 }
 
 body.site-portfolio a.who-talk-title:hover {
-  color: var(--site-accent);
+  color: hsl(292, 50%, 54%);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -634,7 +652,7 @@ body.site-portfolio .who-speaker-cols {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.25rem, 3vw, 2.5rem);
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 0;
 }
 
 body.site-portfolio .who-speaker .who-section-title {
