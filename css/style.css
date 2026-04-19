@@ -595,9 +595,6 @@ body.site-portfolio .who-designer-grid {
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: start;
   width: 100%;
-  max-width: min(56rem, 100%);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 body.site-portfolio .who-designer-copy {
@@ -639,7 +636,7 @@ body.site-portfolio .who-speaker-visual img {
 }
 
 body.site-portfolio .who-speaker-visual {
-  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: clamp(1rem, 2.5vw, 1.35rem);
 }
 
 body.site-portfolio .who-talk-heading {
@@ -671,6 +668,7 @@ body.site-portfolio .who-speaker-cols {
 }
 
 body.site-portfolio .who-speaker .who-section-title {
+  margin-top: 0;
   margin-bottom: clamp(1rem, 2.5vw, 1.25rem);
   text-align: left;
 }
