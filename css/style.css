@@ -590,20 +590,22 @@ body.site-portfolio .who-links {
 }
 
 body.site-portfolio .who-designer-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(1.25rem, 3vw, 2.25rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  width: 100%;
+  max-width: min(56rem, 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body.site-portfolio .who-designer-copy {
-  max-width: 42rem;
-  width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 body.site-portfolio .who-designer-copy .who-links {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 body.site-portfolio .who-fth-grid {
@@ -615,7 +617,6 @@ body.site-portfolio .who-fth-grid {
 
 body.site-portfolio .who-designer-visual {
   width: 100%;
-  max-width: min(36rem, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -671,10 +672,11 @@ body.site-portfolio .who-speaker-cols {
 
 body.site-portfolio .who-speaker .who-section-title {
   margin-bottom: clamp(1rem, 2.5vw, 1.25rem);
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 840px) {
+  body.site-portfolio .who-designer-grid,
   body.site-portfolio .who-fth-grid,
   body.site-portfolio .who-speaker-cols {
     grid-template-columns: 1fr;
