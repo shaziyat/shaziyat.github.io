@@ -5,71 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaziya Tambawala - Designer</title>
   <meta name="description" content="Research-driven designer with 9+ years experience scaling enterprise SaaS tools." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Miriam+Libre:ital,wght@0,400;0,700&family=Gloock:ital,wght@0,400&family=Kaisei+Tokumin:ital,wght@0,700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
   <link rel="stylesheet" href="/portfolio/css/style.css" />
   <style>
-    /* Home — aligned with Squarespace live site */
+    /* Home */
     body.page-home {
-      --home-ink: #3d3d3d;
-      --home-ink-2: #616161;
-      --home-ink-3: #888888;
+      --home-accent: hsl(292, 50%, 64%);
+      --home-text: #000000;
       --home-paper: #ffffff;
       --home-max: 1280px;
       --home-pad-x: clamp(1.25rem, 6vw, 5.5rem);
-      font-family: Karla, system-ui, sans-serif;
+      --home-btn-border: rgb(199, 199, 199);
+      --home-btn-bg: rgb(255, 253, 250);
+      --font-avenir: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       font-weight: 400;
       line-height: 1.75;
-      color: var(--home-ink-2);
+      color: var(--home-text);
       background: var(--home-paper);
     }
 
-    body.page-home .page-home-inner {
+    body.page-home .page-home-align {
       max-width: var(--home-max);
-      margin: 0 auto;
-      padding: 0 var(--home-pad-x) 4rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--home-pad-x);
+      padding-right: var(--home-pad-x);
     }
 
     body.page-home nav {
       background: var(--home-paper);
-      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+      padding: 0;
+    }
+
+    body.page-home .page-home-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-h);
     }
 
     body.page-home .nav-links a {
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: 0.06em;
-      font-family: Chivo, sans-serif;
-      font-weight: 400;
+      font-family: var(--font-avenir);
+      font-weight: 500;
+      color: var(--home-accent);
+      text-decoration: none;
     }
 
-    /* Page banner — WHAT */
-    .home-page-banner {
-      text-align: center;
-      margin-top: 5.5vh;
-      margin-bottom: 7.5vh;
-      padding: 0 var(--home-pad-x);
+    body.page-home .nav-links a:hover {
+      text-decoration: underline;
     }
 
-    .home-page-banner h1 {
-      font-family: Gloock, Georgia, serif;
-      font-size: clamp(2rem, 4.5vw, 2.75rem);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--home-ink);
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+    body.page-home .nav-links a.active {
+      color: var(--home-accent);
     }
 
-    /* Hero — 5 / 12 + 7 / 12 */
+    body.page-home .page-home-inner {
+      padding-bottom: 4rem;
+    }
+
+    /* Section titles — 24px accent */
+    .home-section-title {
+      font-family: var(--font-avenir);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--home-accent);
+      margin: 0 0 0.35em;
+      white-space: pre-wrap;
+    }
+
+    /* Hero — 5 / 7 */
     .home-hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
       gap: clamp(1.5rem, 4vw, 3rem);
       align-items: start;
       margin-bottom: clamp(3rem, 8vw, 5.5rem);
+      padding-top: clamp(1.5rem, 4vh, 3rem);
     }
 
     .home-hero-photo {
@@ -94,88 +111,90 @@
       object-position: 50% 50%;
     }
 
-    .home-hero-copy h1 {
-      font-family: Gloock, Georgia, serif;
-      font-size: clamp(2.25rem, 4.5vw, 3.7rem);
-      font-weight: 400;
-      line-height: 1;
-      color: var(--home-ink);
-      margin: 0 0 0.35em;
-      white-space: pre-wrap;
-    }
-
     .home-hero-copy h2 {
-      font-family: Gloock, Georgia, serif;
-      font-size: clamp(1.5rem, 2.8vw, 2rem);
-      font-weight: 400;
+      font-family: var(--font-avenir);
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 500;
       line-height: 1.2;
-      color: var(--home-ink);
+      color: var(--home-text);
       margin: 0 0 0.5em;
       white-space: pre-wrap;
     }
 
     .home-meta {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
-      color: var(--home-ink-3);
+      color: var(--home-text);
       margin: 0 0 1rem;
       white-space: pre-wrap;
     }
 
-    .home-meta strong { font-weight: 700; color: var(--home-ink); }
+    .home-meta strong {
+      font-weight: 700;
+      color: var(--home-text);
+    }
 
     .home-lede {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 19px;
-      line-height: 1.25;
+      line-height: 1.35;
       font-weight: 400;
-      color: var(--home-ink-2);
+      color: var(--home-text);
       margin: 0 0 1.5rem;
       white-space: pre-wrap;
     }
 
-    .home-lede a {
-      color: inherit;
+    /* Inline links — accent, underline on hover only */
+    body.page-home a.home-text-link {
+      color: var(--home-accent);
+      text-decoration: none;
+    }
+
+    body.page-home a.home-text-link:hover {
       text-decoration: underline;
       text-underline-offset: 2px;
     }
 
-    .home-lede a:hover { opacity: 0.75; }
-
+    /* Framer-style pill buttons (see andrewnelson.design hero) */
     .home-btns {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem 1.25rem;
+      gap: 0.75rem 1rem;
       align-items: center;
     }
 
-    .home-btns a {
-      font-family: Chivo, sans-serif;
-      font-size: 12px;
+    .home-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--font-avenir);
+      font-size: 18px;
+      line-height: 1.4;
       font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--home-ink);
-      background: transparent;
-      border: none;
-      padding: 0.35rem 0;
+      /* Match andrewnelson.design hero “About” — dark text on bordered tile */
+      color: rgb(52, 51, 50);
       text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s, opacity 0.15s;
+      border: 1px solid var(--home-btn-border);
+      background-color: var(--home-btn-bg);
+      border-radius: 6px;
+      padding: 0.65rem 1.15rem;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
-    .home-btns a.home-btn-resume {
-      text-transform: lowercase;
-      letter-spacing: 0.04em;
+    .home-pill-btn:hover {
+      background-color: #fff;
+      border-color: #b0b0b0;
     }
 
-    .home-btns a:hover {
-      border-bottom-color: var(--home-ink);
-      opacity: 0.85;
+    .home-pill-btn svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      fill: currentColor;
     }
 
-    /* Three columns */
     .home-spacer-lg {
       height: clamp(2.5rem, 5vw, 4rem);
     }
@@ -187,46 +206,29 @@
       margin-bottom: clamp(2.5rem, 5vw, 4rem);
     }
 
-    .home-col h1 {
-      font-family: Gloock, Georgia, serif;
-      font-size: clamp(1.35rem, 2vw, 1.65rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--home-ink);
-      margin: 0 0 0.75rem;
-      white-space: pre-wrap;
-    }
-
     .home-col h3 {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.4;
       font-weight: 400;
-      color: var(--home-ink);
+      color: var(--home-text);
       margin: 1rem 0 0.35rem;
       white-space: pre-wrap;
     }
 
-    .home-col h3:first-of-type { margin-top: 0; }
+    .home-col h3:first-of-type {
+      margin-top: 0;
+    }
 
     .home-col p {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
-      color: var(--home-ink-2);
+      color: var(--home-text);
       margin: 0 0 0.75rem;
       white-space: pre-wrap;
     }
 
-    .home-col a {
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .home-col a:hover { opacity: 0.75; }
-
-    /* Recent experience header row */
     .home-recent-head {
       display: grid;
       grid-template-columns: minmax(0, 10fr) minmax(0, 2fr);
@@ -235,34 +237,15 @@
       margin-bottom: clamp(1.5rem, 3vw, 2rem);
     }
 
-    .home-recent-head h1 {
-      font-family: Gloock, Georgia, serif;
-      font-size: clamp(1.35rem, 2vw, 1.65rem);
-      font-weight: 400;
-      color: var(--home-ink);
-      margin: 0;
-      white-space: pre-wrap;
-    }
-
     .home-recent-resume {
       justify-self: end;
-      text-align: center;
     }
 
-    .home-recent-resume a {
-      font-family: Chivo, sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-      color: var(--home-ink);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s;
+    .home-recent-resume .home-pill-btn {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
     }
 
-    .home-recent-resume a:hover { border-bottom-color: var(--home-ink); }
-
-    /* Experience 4-up */
     .home-exp-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -292,34 +275,31 @@
     }
 
     .home-exp-card h3 {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       font-weight: 700;
-      color: var(--home-ink);
+      color: var(--home-text);
       margin: 0 0 0.35rem;
       white-space: pre-wrap;
     }
 
     .home-exp-card p {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 16px;
       line-height: 1.6;
-      color: var(--home-ink-2);
+      color: var(--home-text);
       margin: 0;
       white-space: pre-wrap;
     }
 
-    /* Footer */
     body.page-home footer.home-footer {
       margin-top: clamp(3rem, 8vw, 6rem);
-      padding: 2.5rem var(--home-pad-x) 3rem;
-      border-top: 0.5px solid rgba(0,0,0,0.08);
+      padding: 2.5rem 0 3rem;
+      border-top: 0.5px solid rgba(0, 0, 0, 0.08);
       background: var(--home-paper);
     }
 
     .home-footer-inner {
-      max-width: var(--home-max);
-      margin: 0 auto;
       display: grid;
       grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
       gap: 1.5rem;
@@ -339,12 +319,14 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--home-ink);
+      background: var(--home-text);
       color: #fff;
       transition: opacity 0.15s;
     }
 
-    .home-social a:hover { opacity: 0.8; }
+    .home-social a:hover {
+      opacity: 0.8;
+    }
 
     .home-social svg {
       width: 18px;
@@ -353,69 +335,85 @@
     }
 
     .home-footer-copy {
-      font-family: Karla, sans-serif;
+      font-family: var(--font-avenir);
       font-size: 14px;
       font-style: italic;
-      color: var(--home-ink-2);
+      color: var(--home-text);
       text-align: right;
       margin: 0;
       line-height: 1.5;
     }
 
     @media (max-width: 900px) {
-      .home-three-col { grid-template-columns: 1fr; }
-      .home-exp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-three-col {
+        grid-template-columns: 1fr;
+      }
+      .home-exp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .home-recent-head {
         grid-template-columns: 1fr;
         justify-items: start;
       }
-      .home-recent-resume { justify-self: start; }
+      .home-recent-resume {
+        justify-self: start;
+      }
     }
 
     @media (max-width: 640px) {
-      .home-hero-grid { grid-template-columns: 1fr; }
+      .home-hero-grid {
+        grid-template-columns: 1fr;
+      }
       .home-footer-inner {
         grid-template-columns: 1fr;
         text-align: left;
       }
-      .home-footer-copy { text-align: left; }
-      .home-exp-grid { grid-template-columns: 1fr; }
+      .home-footer-copy {
+        text-align: left;
+      }
+      .home-exp-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body class="page-home">
 
   <nav>
-    <a class="nav-logo" href="/portfolio/index.html">
-      <img src="/portfolio/assets/logo.png" alt="Shaziya Tambawala" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/portfolio/index.html" class="active">WHAT</a></li>
-      <li><a href="/portfolio/how.html">HOW</a></li>
-      <li><a href="/portfolio/who.html">WHO</a></li>
-    </ul>
+    <div class="page-home-align page-home-nav-inner">
+      <a class="nav-logo" href="/portfolio/index.html">
+        <img src="/portfolio/assets/logo.png" alt="Shaziya Tambawala" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/portfolio/index.html" class="active">WHAT</a></li>
+        <li><a href="/portfolio/how.html">HOW</a></li>
+        <li><a href="/portfolio/who.html">WHO</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main>
-    <header class="home-page-banner">
-      <h1>WHAT</h1>
-    </header>
-
-    <div class="page-home-inner">
+    <div class="page-home-align page-home-inner">
 
       <section class="home-hero-grid" aria-label="Introduction">
         <div class="home-hero-photo">
           <img src="/portfolio/assets/shaziya.png" alt="Shaziya Tambawala" />
         </div>
         <div class="home-hero-copy">
-          <h1>UX AND DESIGN STRATEGY</h1>
+          <h1 class="home-section-title">UX AND DESIGN STRATEGY</h1>
           <h2>Heyo, I’m Shaziya.</h2>
           <p class="home-meta">🔊 shah • zee • yah  |  aka purplecoppertalk  |  <strong>♀ </strong>she/her  |  📍 Bay Area, CA</p>
-          <h3 class="home-lede">Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I’m a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I’m currently exploring AI communication experiences at <a href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank" rel="noopener noreferrer">RingCentral</a>.</h3>
+          <h3 class="home-lede">Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I’m a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I’m currently exploring AI communication experiences at <a class="home-text-link" href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank" rel="noopener noreferrer">RingCentral</a>.</h3>
           <div class="home-btns">
-            <a class="home-btn-resume" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
-            <a href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-            <a href="mailto:hello@shaziyatambawala.com">EMAIL</a>
+            <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+            <a class="home-pill-btn" href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a class="home-pill-btn" href="mailto:hello@shaziyatambawala.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email
+            </a>
           </div>
         </div>
       </section>
@@ -424,7 +422,7 @@
 
       <section class="home-three-col" aria-label="Highlights">
         <div class="home-col">
-          <h1>SUPERPOWERS</h1>
+          <h1 class="home-section-title">SUPERPOWERS</h1>
           <h3><strong>Creative facilitator</strong></h3>
           <p>Distilling concepts into digestible chunks while understanding system-wide connections.</p>
           <h3><strong>Thoughtful doer</strong></h3>
@@ -433,16 +431,16 @@
           <p>Challenging established thinking and developing new approaches across multiple stakeholder levels with&nbsp;researched options.</p>
         </div>
         <div class="home-col">
-          <h1>MOST PROUD OF</h1>
+          <h1 class="home-section-title">MOST PROUD OF</h1>
           <h3><strong>U.S. Patent </strong></h3>
-          <p>Designed archiving experiences for Confluence Cloud and co-invented <a href="https://patents.google.com/patent/US12547584B2/en" target="_blank" rel="noopener noreferrer">this patent</a>.</p>
+          <p>Designed archiving experiences for Confluence Cloud and co-invented <a class="home-text-link" href="https://patents.google.com/patent/US12547584B2/en" target="_blank" rel="noopener noreferrer">this patent</a>.</p>
           <h3><strong>TEAM ‘23 talk</strong></h3>
-          <p>Spoke about <a href="https://events.atlassian.com/team23/v/s-1425372" target="_blank" rel="noopener noreferrer">a UX-driven approach </a>for product champions to promote usage in their teams.</p>
+          <p>Spoke about <a class="home-text-link" href="https://events.atlassian.com/team23/v/s-1425372" target="_blank" rel="noopener noreferrer">a UX-driven approach </a>for product champions to promote usage in their teams.</p>
           <h3><strong>Article on design leadership</strong></h3>
-          <p>Wrote <a href="https://medium.com/designing-atlassian/think-introverted-act-extroverted-976e3164f3a0" target="_blank" rel="noopener noreferrer">Think introverted; act extroverted</a> on how to be a design leader and still be yourself. It became <a href="https://blog.medium.com/what-were-reading-breaking-the-ice-understanding-internet-brain-and-an-expert-s-advice-on-222081f7b6a5" target="_blank" rel="noopener noreferrer">Medium staff’s picks of the month</a>.</p>
+          <p>Wrote <a class="home-text-link" href="https://medium.com/designing-atlassian/think-introverted-act-extroverted-976e3164f3a0" target="_blank" rel="noopener noreferrer">Think introverted; act extroverted</a> on how to be a design leader and still be yourself. It became <a class="home-text-link" href="https://blog.medium.com/what-were-reading-breaking-the-ice-understanding-internet-brain-and-an-expert-s-advice-on-222081f7b6a5" target="_blank" rel="noopener noreferrer">Medium staff’s picks of the month</a>.</p>
         </div>
         <div class="home-col">
-          <h1>THREADS IN MY CAREER</h1>
+          <h1 class="home-section-title">THREADS IN MY CAREER</h1>
           <h3><strong>Startups within enterprises</strong></h3>
           <p>4 out of 5 long-term gigs have been for young, lean teams within larger enterprises.</p>
           <h3><strong>Multitude of domains</strong></h3>
@@ -455,9 +453,9 @@
       <div class="home-spacer-lg" aria-hidden="true"></div>
 
       <section class="home-recent-head" aria-label="Recent experience">
-        <h1>RECENT EXPERIENCE</h1>
+        <h1 class="home-section-title">RECENT EXPERIENCE</h1>
         <div class="home-recent-resume">
-          <a href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
+          <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
         </div>
       </section>
 
@@ -496,7 +494,7 @@
   </main>
 
   <footer class="home-footer">
-    <div class="home-footer-inner">
+    <div class="page-home-align home-footer-inner">
       <div class="home-social">
         <a href="mailto:hello@shaziyatambawala.com" aria-label="Email">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
