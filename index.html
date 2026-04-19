@@ -6,369 +6,11 @@
   <title>Shaziya Tambawala - Designer</title>
   <meta name="description" content="Research-driven designer with 9+ years experience scaling enterprise SaaS tools." />
   <link rel="stylesheet" href="/portfolio/css/style.css" />
-  <style>
-    /* Home — weights only regular (400) or demi (600); no lighter/heavier */
-    body.page-home {
-      --home-accent: hsl(292, 50%, 64%);
-      --home-text: #000000;
-      --home-paper: #ffffff;
-      --home-max: 1280px;
-      --home-pad-x: clamp(1.25rem, 6vw, 5.5rem);
-      --home-btn-border: rgb(199, 199, 199);
-      --home-btn-bg: #ffffff;
-      --home-edge-spacing: clamp(3rem, 8vw, 6rem);
-      --font-weight-regular: 400;
-      --font-weight-demi: 600;
-      /* Heading 1 — section titles (reuse .heading-1 or .home-section-title) */
-      --heading-1-size: 20px;
-      --hero-name-size: 40px;
-      --font-avenir: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      font-weight: var(--font-weight-regular);
-      line-height: 1.75;
-      color: var(--home-text);
-      background: #ffffff;
-    }
-
-    body.page-home strong {
-      font-weight: var(--font-weight-demi);
-    }
-
-    /* Override global style.css p { font-weight: 300 } on this page */
-    body.page-home p {
-      font-weight: var(--font-weight-regular);
-    }
-
-    body.page-home .page-home-align {
-      max-width: var(--home-max);
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: var(--home-pad-x);
-      padding-right: var(--home-pad-x);
-    }
-
-    body.page-home nav {
-      background: #ffffff;
-      border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
-      padding: 0;
-    }
-
-    body.page-home .page-home-nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      height: var(--nav-h);
-    }
-
-    body.page-home .nav-logo {
-      flex-shrink: 0;
-      margin-right: auto;
-    }
-
-    body.page-home .nav-links {
-      margin-left: auto;
-    }
-
-    body.page-home .nav-links a {
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: 0.04em;
-      font-family: var(--font-avenir);
-      font-weight: var(--font-weight-demi);
-      color: var(--home-accent);
-      text-decoration: none;
-    }
-
-    body.page-home .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    body.page-home .nav-links a.active {
-      color: var(--home-accent);
-    }
-
-    body.page-home main {
-      background: #ffffff;
-    }
-
-    body.page-home .page-home-inner {
-      padding-top: var(--home-edge-spacing);
-      padding-bottom: 4rem;
-    }
-
-    /* Heading 1 — matches --heading-1-size + demi */
-    .home-section-title,
-    .heading-1 {
-      font-family: var(--font-avenir);
-      font-size: var(--heading-1-size);
-      font-weight: var(--font-weight-demi);
-      line-height: 1.25;
-      color: var(--home-accent);
-      margin: 0 0 0.35em;
-      white-space: pre-wrap;
-    }
-
-    /* Hero — 5 / 7 */
-    .home-hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-      gap: clamp(1.5rem, 4vw, 3rem);
-      align-items: start;
-      margin-bottom: clamp(3rem, 8vw, 5.5rem);
-      padding-top: 0;
-    }
-
-    .home-hero-photo {
-      position: relative;
-      width: 100%;
-      max-width: 702px;
-      margin: 0 auto;
-    }
-
-    .home-hero-photo::before {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-
-    .home-hero-photo img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
-
-    .home-hero-copy h2 {
-      font-family: var(--font-avenir);
-      font-size: var(--hero-name-size);
-      font-weight: var(--font-weight-demi);
-      line-height: 1.15;
-      color: var(--home-text);
-      margin: 0 0 0.5em;
-      white-space: pre-wrap;
-    }
-
-    .home-meta {
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      line-height: 1.6;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      margin: 0 0 1rem;
-      white-space: pre-wrap;
-    }
-
-    .home-meta strong {
-      font-weight: var(--font-weight-demi);
-      color: var(--home-text);
-    }
-
-    .home-lede {
-      font-family: var(--font-avenir);
-      font-size: 19px;
-      line-height: 1.35;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      margin: 0 0 1.5rem;
-      white-space: pre-wrap;
-    }
-
-    /* Inline links — accent, underline on hover only */
-    body.page-home a.home-text-link {
-      color: var(--home-accent);
-      text-decoration: none;
-    }
-
-    body.page-home a.home-text-link:hover {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* Framer-style pill buttons (see andrewnelson.design hero) */
-    .home-btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 0.65rem;
-      align-items: center;
-    }
-
-    .home-pill-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-avenir);
-      font-size: 14px;
-      line-height: 1.25;
-      font-weight: var(--font-weight-regular);
-      color: rgb(52, 51, 50);
-      text-decoration: none;
-      border: 1px solid var(--home-btn-border);
-      background-color: var(--home-btn-bg);
-      border-radius: 6px;
-      padding: 0.35rem 0.65rem;
-      transition: background-color 0.15s ease, border-color 0.15s ease;
-    }
-
-    .home-pill-btn:hover {
-      background-color: #ffffff;
-      border-color: #b0b0b0;
-    }
-
-    .home-spacer-lg {
-      height: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    .home-three-col {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: clamp(1.25rem, 3vw, 2.5rem);
-      margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    .home-col h3 {
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      line-height: 1.4;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      margin: 1rem 0 0.35rem;
-      white-space: pre-wrap;
-    }
-
-    .home-col h3:first-of-type {
-      margin-top: 0;
-    }
-
-    .home-col p {
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      line-height: 1.6;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      margin: 0 0 0.75rem;
-      white-space: pre-wrap;
-    }
-
-    .home-recent-head {
-      display: grid;
-      grid-template-columns: minmax(0, 10fr) minmax(0, 2fr);
-      gap: 1rem;
-      align-items: center;
-      margin-bottom: clamp(1.5rem, 3vw, 2rem);
-    }
-
-    .home-recent-resume {
-      justify-self: end;
-    }
-
-    .home-recent-resume .home-pill-btn {
-      font-size: 14px;
-      padding: 0.35rem 0.65rem;
-    }
-
-    .home-exp-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(1rem, 2.5vw, 2rem);
-    }
-
-    .home-exp-card figure {
-      margin: 0 0 0.75rem;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .home-exp-card figure::before {
-      content: "";
-      display: block;
-      padding-bottom: 74.92%;
-    }
-
-    .home-exp-card figure img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
-
-    .home-exp-card h3 {
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      font-weight: var(--font-weight-demi);
-      color: var(--home-text);
-      margin: 0 0 0.35rem;
-      white-space: pre-wrap;
-    }
-
-    .home-exp-card p {
-      font-family: var(--font-avenir);
-      font-size: 16px;
-      line-height: 1.6;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      margin: 0;
-      white-space: pre-wrap;
-    }
-
-    body.page-home footer.home-footer {
-      margin-top: var(--home-edge-spacing);
-      padding: 2.5rem 0 3rem;
-      border-top: 0.5px solid rgba(0, 0, 0, 0.08);
-      background: #ffffff;
-    }
-
-    .home-footer-inner {
-      text-align: center;
-    }
-
-    .home-footer-copy {
-      font-family: var(--font-avenir);
-      font-size: 14px;
-      font-style: italic;
-      font-weight: var(--font-weight-regular);
-      color: var(--home-text);
-      text-align: center;
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 900px) {
-      .home-three-col {
-        grid-template-columns: 1fr;
-      }
-      .home-exp-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .home-recent-head {
-        grid-template-columns: 1fr;
-        justify-items: start;
-      }
-      .home-recent-resume {
-        justify-self: start;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .home-hero-grid {
-        grid-template-columns: 1fr;
-      }
-      .home-exp-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="page-home">
+<body class="page-home site-portfolio">
 
   <nav>
-    <div class="page-home-align page-home-nav-inner">
+    <div class="site-align">
       <a class="nav-logo" href="/portfolio/index.html">
         <img src="/portfolio/assets/logo.png" alt="Shaziya Tambawala" />
       </a>
@@ -381,7 +23,7 @@
   </nav>
 
   <main>
-    <div class="page-home-align page-home-inner">
+    <div class="site-shell page-home-inner">
 
       <section class="home-hero-grid" aria-label="Introduction">
         <div class="home-hero-photo">
@@ -390,12 +32,13 @@
         <div class="home-hero-copy">
           <h1 class="home-section-title heading-1">UX AND DESIGN STRATEGY</h1>
           <h2>Heyo, I’m Shaziya.</h2>
-          <p class="home-meta">🔊 shah • zee • yah  |  aka purplecoppertalk  |  <strong>♀ </strong>she/her  |  📍 Bay Area, CA</p>
+          <p class="home-meta">
+            <span class="home-meta-text">shah • zee • yah</span><span class="home-meta-pipe"> | </span><span class="home-meta-text">aka purplecoppertalk</span><span class="home-meta-pipe"> | </span><span class="home-meta-text"><strong>♀</strong> she/her</span><span class="home-meta-pipe"> | </span><span class="home-meta-text">Bay Area, CA</span>
+          </p>
           <h3 class="home-lede">Research-driven designer with 9+ years experience scaling enterprise SaaS tools. I’m a systems thinker with a focus on modernizing legacy workflows, implementing GenAI-powered features, and creating cohesive experiences that enhance user engagement. I’m currently exploring AI communication experiences at <a class="home-text-link" href="https://www.ringcentral.com/ringsense-for-sales.html" target="_blank" rel="noopener noreferrer">RingCentral</a>.</h3>
           <div class="home-btns">
-            <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+            <a class="home-pill-btn home-pill-btn--lower" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
             <a class="home-pill-btn" href="https://www.linkedin.com/in/shaztam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="home-pill-btn" href="mailto:hello@shaziyatambawala.com">Email</a>
           </div>
         </div>
       </section>
@@ -437,7 +80,7 @@
       <section class="home-recent-head" aria-label="Recent experience">
         <h1 class="home-section-title heading-1">RECENT EXPERIENCE</h1>
         <div class="home-recent-resume">
-          <a class="home-pill-btn" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+          <a class="home-pill-btn home-pill-btn--lower" href="/portfolio/assets/Shaziya-Tambawala-Resume.pdf" target="_blank" rel="noopener noreferrer">résumé</a>
         </div>
       </section>
 
@@ -476,8 +119,8 @@
   </main>
 
   <footer class="home-footer">
-    <div class="page-home-align home-footer-inner">
-      <p class="home-footer-copy"><em>© 2026 Shaziya Tambawala&nbsp; |  No developers were harmed in the making of this website.</em></p>
+    <div class="site-shell home-footer-inner">
+      <p class="site-footer-copy">© 2026 Shaziya Tambawala | No developers were harmed in the making of this website.</p>
     </div>
   </footer>
 
