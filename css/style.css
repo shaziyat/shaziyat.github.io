@@ -534,14 +534,13 @@ body.site-portfolio p {
 
 /* Who page */
 body.site-portfolio .who-page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
   padding-bottom: 3rem;
 }
 
 body.site-portfolio .who-block {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
-body.site-portfolio .who-block:last-child {
   margin-bottom: 0;
 }
 
