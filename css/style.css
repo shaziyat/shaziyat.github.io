@@ -722,7 +722,7 @@ body.page-how .project-card:hover {
 }
 
 body.page-how .project-card-thumb {
-  aspect-ratio: 1.75 / 1;
+  aspect-ratio: 2 / 0.8;
   width: 100%;
   min-width: 0;
   border-radius: 12px;
