@@ -608,7 +608,7 @@ body.site-portfolio .who-designer-copy .who-links {
 
 body.site-portfolio .who-fth-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: start;
 }
