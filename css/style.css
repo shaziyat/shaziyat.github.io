@@ -659,12 +659,12 @@ body.page-home .home-lede {
   white-space: pre-wrap;
 }
 
-body.page-home a.home-text-link {
-  color: var(--home-accent);
+body.site-portfolio a.home-text-link {
+  color: var(--site-accent);
   text-decoration: none;
 }
 
-body.page-home a.home-text-link:hover {
+body.site-portfolio a.home-text-link:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
