@@ -722,12 +722,37 @@ body.page-how .project-card:hover {
 }
 
 body.page-how .project-card-thumb {
+  position: relative;
   aspect-ratio: 2 / 0.8;
   width: 100%;
   min-width: 0;
   border-radius: 12px;
+  overflow: hidden;
   background: #ececec;
   border: none;
+}
+
+body.page-how .project-card-thumb > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+body.page-how .project-card-thumb--dual .project-thumb-base {
+  z-index: 0;
+}
+
+body.page-how .project-card-thumb--dual .project-thumb-hover {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+body.page-how .project-card:hover .project-card-thumb--dual .project-thumb-hover {
+  opacity: 1;
 }
 
 body.page-how .project-card-main {
