@@ -709,7 +709,7 @@ body.page-how .project-card {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: clamp(1.25rem, 3vw, 2rem);
-  align-items: start;
+  align-items: center;
   padding: 1.75rem 0;
   border: none;
   text-decoration: none;
@@ -722,7 +722,7 @@ body.page-how .project-card:hover {
 }
 
 body.page-how .project-card-thumb {
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 3 / 1;
   width: 100%;
   min-width: 0;
   border-radius: 12px;
@@ -734,22 +734,10 @@ body.page-how .project-card-main {
   min-width: 0;
 }
 
-/* Match WHAT page .home-section-title / .heading-1 */
-body.page-how .project-meta {
-  font-family: var(--font-avenir);
-  font-size: max(10px, 16px);
-  font-weight: var(--font-weight-demi);
-  line-height: normal;
-  letter-spacing: 0.05em;
-  color: #000000;
-  margin: 0 0 0.35em;
-  white-space: pre-wrap;
-}
-
 body.page-how .project-title {
   color: #000000;
   font-size: max(10px, 1.35rem);
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
 }
 
 body.page-how .project-desc {
