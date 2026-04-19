@@ -612,17 +612,13 @@ body.page-home .home-hero-grid {
   padding-top: 0;
 }
 
+/* Matches assets/shaziya.png (548×502); update ratio if the asset dimensions change */
 body.page-home .home-hero-photo {
   position: relative;
   width: 100%;
   max-width: 702px;
   margin: 0 auto;
-}
-
-body.page-home .home-hero-photo::before {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+  aspect-ratio: 548 / 502;
 }
 
 body.page-home .home-hero-photo img {
