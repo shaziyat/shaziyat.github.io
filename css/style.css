@@ -532,6 +532,123 @@ body.site-portfolio p {
   font-weight: var(--font-weight-regular);
 }
 
+/* Who page */
+body.site-portfolio .who-page {
+  padding-bottom: 3rem;
+}
+
+body.site-portfolio .who-block {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+body.site-portfolio .who-block:last-child {
+  margin-bottom: 0;
+}
+
+body.site-portfolio .who-block:first-child {
+  padding-top: var(--site-edge-spacing);
+}
+
+body.site-portfolio .who-section-title {
+  font-family: var(--font-avenir);
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-demi);
+  color: var(--color-ink);
+  margin: 0 0 1rem;
+  line-height: normal;
+}
+
+body.site-portfolio .who-prose-text {
+  font-size: 1.05rem;
+  line-height: normal;
+  color: var(--color-ink-2);
+}
+
+body.site-portfolio .who-prose-text p {
+  margin: 0 0 1.25rem;
+}
+
+body.site-portfolio .who-prose-text p:last-child {
+  margin-bottom: 0;
+}
+
+body.site-portfolio .who-quote {
+  font-weight: var(--font-weight-demi);
+  font-style: normal;
+  color: var(--color-ink-2);
+}
+
+body.site-portfolio .who-medium {
+  font-weight: 500;
+}
+
+body.site-portfolio .who-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  margin-top: 0.5rem;
+}
+
+body.site-portfolio .who-designer-grid,
+body.site-portfolio .who-fth-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+body.site-portfolio .who-fth-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+body.site-portfolio .who-designer-visual img,
+body.site-portfolio .who-fth-visual img,
+body.site-portfolio .who-speaker-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body.site-portfolio .who-talk-heading {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  line-height: normal;
+  font-weight: var(--font-weight-regular);
+}
+
+body.site-portfolio a.who-talk-title {
+  font-family: var(--font-avenir);
+  font-weight: var(--font-weight-demi);
+  font-size: 1.1rem;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+body.site-portfolio a.who-talk-title:hover {
+  color: var(--site-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.site-portfolio .who-speaker-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+body.site-portfolio .who-speaker .who-section-title {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 840px) {
+  body.site-portfolio .who-designer-grid,
+  body.site-portfolio .who-fth-grid,
+  body.site-portfolio .who-speaker-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
 body.site-portfolio .page-header h1 {
   font-family: var(--font-avenir);
   font-weight: var(--font-weight-demi);
