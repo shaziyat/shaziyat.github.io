@@ -385,6 +385,10 @@ footer .container {
   }
   .project-arrow { text-align: left; }
 
+  body.page-how .project-card {
+    grid-template-columns: 1fr;
+  }
+
   .cs-meta-bar { gap: 1.25rem; }
 
   footer .container { flex-direction: column; align-items: flex-start; }
@@ -692,6 +696,93 @@ body.site-portfolio .page-header h1 {
 body.site-portfolio .project-title {
   font-family: var(--font-avenir);
   font-weight: var(--font-weight-demi);
+}
+
+/* How page — project list (body.page-how) */
+body.page-how main > .container {
+  padding-top: var(--site-edge-spacing);
+  padding-bottom: 3rem;
+  color: #000000;
+}
+
+body.page-how .project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+  padding: 1.75rem 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #000000;
+  transition: background-color 0.15s ease;
+}
+
+body.page-how .project-card:first-child {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+body.page-how .project-card:hover {
+  opacity: 1;
+}
+
+body.page-how .project-card-thumb {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-width: 0;
+  border-radius: 12px;
+  background: #ececec;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+
+body.page-how .project-card-main {
+  min-width: 0;
+}
+
+body.page-how .project-meta {
+  color: #000000;
+  font-size: max(10px, 12px);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0.5rem;
+}
+
+body.page-how .project-title {
+  color: #000000;
+  font-size: max(10px, 1.35rem);
+  margin-bottom: 0.75rem;
+}
+
+body.page-how .project-desc {
+  color: #000000;
+  font-size: max(10px, 15px);
+  line-height: normal;
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+}
+
+body.page-how .project-case-study {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  padding: 8px 18px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-family: var(--font-avenir);
+  font-size: max(10px, 14px);
+  font-weight: var(--font-weight-regular);
+  color: #000000;
+}
+
+body.page-how .project-case-study-arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+body.page-how .project-card:hover .project-case-study-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 body.site-portfolio h2 {
