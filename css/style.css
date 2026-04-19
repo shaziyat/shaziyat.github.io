@@ -567,16 +567,6 @@ body.site-portfolio .who-prose-text {
   color: var(--color-ink-2);
 }
 
-/* Match WHAT page .home-lede (19px) */
-body.site-portfolio .who-prose-text p.who-designer-lede {
-  font-family: var(--font-avenir);
-  font-size: 19px;
-  line-height: normal;
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  margin: 0 0 1.25rem;
-}
-
 body.site-portfolio .who-prose-text p {
   margin: 0 0 1.25rem;
 }
