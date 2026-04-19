@@ -1,2 +1,2 @@
-# shaziyat-portfolio
+# portfolio
 Shaziya Tambawala — Product Design portfolio
