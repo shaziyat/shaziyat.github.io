@@ -616,7 +616,7 @@ body.page-home .home-hero-grid {
 body.page-home .home-hero-photo {
   position: relative;
   width: 100%;
-  max-width: 702px;
+  max-width: calc(702px * 0.75);
   margin: 0 auto;
   aspect-ratio: 548 / 502;
 }
