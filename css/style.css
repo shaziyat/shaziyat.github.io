@@ -722,7 +722,7 @@ body.page-how .project-card:hover {
 }
 
 body.page-how .project-card-thumb {
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 1.75 / 1;
   width: 100%;
   min-width: 0;
   border-radius: 12px;
@@ -754,7 +754,7 @@ body.page-how .project-case-study {
   align-items: center;
   justify-content: center;
   gap: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 8px 18px;
   border: 1px solid var(--site-accent);
   border-radius: 4px;
