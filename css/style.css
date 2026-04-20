@@ -875,15 +875,6 @@ body.page-case-study .container > a.cs-all-projects-link:first-child {
   margin-bottom: 2rem;
 }
 
-body.page-case-study .cs-eyebrow {
-  font-size: 12px;
-  font-weight: var(--font-weight-regular);
-  letter-spacing: 0.02em;
-  text-transform: none;
-  color: #000000;
-  margin-bottom: 0.75rem;
-}
-
 body.page-case-study .cs-hero-title {
   font-family: var(--font-avenir);
   font-size: clamp(2rem, 4vw, 3rem);
@@ -916,15 +907,17 @@ body.page-case-study .step-body p {
 }
 
 body.page-case-study .cs-meta-label {
-  font-size: 12px;
+  font-size: 1em;
   font-weight: var(--font-weight-regular);
+  color: #000000;
 }
 
 body.page-case-study .cs-meta-value {
   font-family: var(--font-avenir);
-  font-size: max(12px, 0.875em);
+  font-size: 1em;
   font-weight: var(--font-weight-regular);
   color: #000000;
+  line-height: normal;
 }
 
 body.page-case-study .stat-card {
@@ -939,9 +932,10 @@ body.page-case-study .stat-num {
 
 body.page-case-study .stat-label {
   font-family: var(--font-avenir);
-  font-size: 12px;
+  font-size: 1em;
   font-weight: var(--font-weight-regular);
   color: #000000;
+  line-height: normal;
 }
 
 body.page-case-study .step-num {
