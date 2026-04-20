@@ -823,23 +823,60 @@ body.page-case-study .container {
   font-family: var(--font-avenir);
 }
 
+body.page-case-study main {
+  font-size: 16px;
+}
+
 body.page-case-study main p,
 body.page-case-study main li {
   font-family: var(--font-avenir);
-  font-size: max(12px, 1rem);
+  font-size: max(12px, 1em);
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
 
 body.page-case-study .lead {
   font-family: var(--font-avenir);
-  font-size: max(12px, 1.05rem);
+  font-size: max(12px, 1.05em);
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
 
+body.page-case-study main a:not(.home-pill-btn):not(.cs-all-projects-link) {
+  color: var(--site-accent);
+  text-decoration: none;
+}
+
+body.page-case-study main a:not(.home-pill-btn):not(.cs-all-projects-link):hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.page-case-study a.cs-all-projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  font-family: var(--font-avenir);
+  font-size: max(12px, 14px);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  letter-spacing: 0.02em;
+  color: var(--site-accent);
+  text-decoration: none;
+}
+
+body.page-case-study a.cs-all-projects-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.page-case-study .container > a.cs-all-projects-link:first-child {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
 body.page-case-study .cs-eyebrow {
-  font-size: max(12px, 12px);
+  font-size: 12px;
   font-weight: var(--font-weight-regular);
   letter-spacing: 0.02em;
   text-transform: none;
@@ -873,19 +910,19 @@ body.page-case-study .step-body h3 {
 }
 
 body.page-case-study .step-body p {
-  font-size: max(12px, 14px);
+  font-size: max(12px, 0.875em);
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
 
 body.page-case-study .cs-meta-label {
-  font-size: max(12px, 12px);
+  font-size: 12px;
   font-weight: var(--font-weight-regular);
 }
 
 body.page-case-study .cs-meta-value {
   font-family: var(--font-avenir);
-  font-size: max(12px, 14px);
+  font-size: max(12px, 0.875em);
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
@@ -902,19 +939,15 @@ body.page-case-study .stat-num {
 
 body.page-case-study .stat-label {
   font-family: var(--font-avenir);
-  font-size: max(12px, 12px);
+  font-size: 12px;
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
 
 body.page-case-study .step-num {
   font-family: var(--font-avenir);
+  font-size: 12px;
   font-weight: var(--font-weight-regular);
-}
-
-body.page-case-study .cs-page-top {
-  padding-top: 5rem;
-  margin-bottom: 2rem;
 }
 
 body.page-case-study .cs-nav-row {
