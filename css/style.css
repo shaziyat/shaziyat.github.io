@@ -886,12 +886,12 @@ body.page-case-study .cs-hero-title {
   font-weight: var(--font-weight-demi);
   line-height: 1.1;
   color: #000000;
-  margin: 0 0 1.25rem;
+  margin: 0 0 2.5rem;
 }
 
 body.page-case-study .cs-hero-image {
   width: 100%;
-  margin: 0 0 2rem;
+  margin: 0 0 4rem;
   border-radius: 12px;
   overflow: hidden;
 }
