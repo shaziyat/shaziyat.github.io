@@ -975,6 +975,10 @@ body.page-case-study .stat-num {
   color: #000000;
 }
 
+body.page-case-study .stat-num-plus {
+  color: #1a7f37;
+}
+
 body.page-case-study .stat-label {
   font-family: var(--font-avenir);
   font-size: 1em;
