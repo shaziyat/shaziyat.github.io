@@ -819,8 +819,10 @@ body.page-case-study {
   color: #000000;
 }
 
-body.page-case-study .container {
+body.page-case-study main > .container {
   font-family: var(--font-avenir);
+  padding-left: calc(var(--site-pad-x) * 2);
+  padding-right: calc(var(--site-pad-x) * 2);
 }
 
 body.page-case-study main {
@@ -870,7 +872,7 @@ body.page-case-study a.cs-all-projects-link:hover {
   text-underline-offset: 2px;
 }
 
-body.page-case-study .container > a.cs-all-projects-link:first-child {
+body.page-case-study main > .container > a.cs-all-projects-link:first-child {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
@@ -881,7 +883,23 @@ body.page-case-study .cs-hero-title {
   font-weight: var(--font-weight-demi);
   line-height: 1.1;
   color: #000000;
+  margin: 0 0 1.25rem;
+}
+
+body.page-case-study .cs-hero-image {
+  width: 100%;
   margin: 0 0 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.page-case-study .cs-hero-image img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
 }
 
 body.page-case-study .section h2 {
