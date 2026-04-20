@@ -940,7 +940,7 @@ body.page-case-study .section h2 {
 
 body.page-case-study .step-body h3 {
   font-family: var(--font-avenir);
-  font-size: max(12px, 15px);
+  font-size: max(12px, 1em);
   font-weight: var(--font-weight-demi);
   color: #000000;
 }
