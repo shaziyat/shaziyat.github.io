@@ -907,15 +907,17 @@ body.page-case-study .cs-hero-image img {
 
 body.page-case-study .cs-section-figure {
   margin: 1.25rem 0 1.75rem;
-  border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 body.page-case-study .cs-section-figure img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
+}
+
+body.page-case-study main ul.steps + p {
+  margin-top: 1.75rem;
 }
 
 body.page-case-study .cs-section-figure figcaption {
@@ -944,7 +946,7 @@ body.page-case-study .step-body h3 {
 }
 
 body.page-case-study .step-body p {
-  font-size: max(12px, 0.875em);
+  font-size: max(12px, 1em);
   font-weight: var(--font-weight-regular);
   color: #000000;
 }
