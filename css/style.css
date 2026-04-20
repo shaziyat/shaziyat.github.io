@@ -905,6 +905,19 @@ body.page-case-study .cs-hero-image img {
   border-radius: 12px;
 }
 
+body.page-case-study .cs-section-figure {
+  margin: 1.25rem 0 1.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.page-case-study .cs-section-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 body.page-case-study .section h2 {
   font-family: var(--font-avenir);
   font-size: 1.35rem;
