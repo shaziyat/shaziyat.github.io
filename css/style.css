@@ -920,6 +920,10 @@ body.page-case-study .cs-section-figure--rounded img {
   border-radius: 12px;
 }
 
+body.page-case-study .cs-section-figure--rounded {
+  margin-top: 3rem;
+}
+
 body.page-case-study main ul.steps + p {
   margin-top: 1.75rem;
 }
