@@ -817,8 +817,8 @@ body.site-portfolio h2 {
 /* ═══ Case study pages (projects) ═══ */
 body.page-case-study {
   color: #000000;
-  /* Narrow reading column (~similar to andrewnelson.design project pages) */
-  --cs-content-max: 720px;
+  /* Article width: roomier than 720px, in line with Medium-style long-form (e.g. medium.com/designing-atlassian/...) */
+  --cs-content-max: 900px;
 }
 
 body.page-case-study main > .container {
