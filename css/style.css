@@ -918,13 +918,6 @@ body.page-case-study .cs-section-figure img {
   border-radius: 12px;
 }
 
-body.page-case-study .cs-section-figure--half {
-  width: 50%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 body.page-case-study .section h2 {
   font-family: var(--font-avenir);
   font-size: 1.35rem;
