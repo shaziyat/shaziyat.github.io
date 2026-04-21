@@ -810,6 +810,16 @@ body.page-how .project-card:hover .project-case-study-arrow {
   opacity: 1;
 }
 
+/* How page — stack image (thumb) then text on tablet and narrow viewports */
+@media (max-width: 1024px) {
+  body.page-how .project-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.5rem 0;
+  }
+}
+
 body.site-portfolio h2 {
   font-family: var(--font-avenir);
 }
