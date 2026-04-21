@@ -66,6 +66,10 @@
         </figure>
         <p>ACE — RingCentral's post-call analysis tool — lets managers define scorecards to evaluate agent performance. Traditionally, every unscored call flag required manual review. As call volumes scaled, this created an unsustainable bottleneck: slow, prone to bias, and impossible to maintain at pace.</p>
         <p>My goal was to transform scorecard calibration from a manual chore into an automated, high-trust workflow — and in doing so, leapfrog competitors while driving down cost per resolution.</p>
+        <figure class="cs-section-figure">
+          <img src="/assets/AIinsights-legacy.png" alt="Legacy scorecard table and modal components in ACE" width="1173" height="754" decoding="async" />
+          <figcaption>Legacy scorecard table and modal components</figcaption>
+        </figure>
       </div>
 
       <div class="section">
@@ -76,7 +80,7 @@
       <div class="section">
         <h2>Discovery and tradeoffs</h2>
         <figure class="cs-section-figure">
-          <img src="/assets/AIinsights-discovery.png" alt="Discovery findings: PRD framing vs real scorecard evaluation use cases" width="1639" height="730" decoding="async" />
+          <img src="/assets/AIinsights-discovery.png" alt="Discovery findings: PRD framing vs real scorecard evaluation use cases" width="1606" height="551" decoding="async" />
         </figure>
         <p>Working closely with Data Science, I found the PRD's initial framing — a simple pass/fail scorecard evaluation — didn't hold up against real use cases. Questions were more nuanced than expected, requiring the AI to understand the manager's underlying intent.</p>
         <p>Backend conversations surfaced two key tensions:</p>
@@ -101,8 +105,16 @@
       <div class="section">
         <h2>Design approach</h2>
         <p>I explored two directions. The first followed the PRD: a scorecard-level evaluation tagging each question as "Strong" or "Needs Work." Testing revealed a critical gap — it diagnosed problems without prescribing solutions. A pass/fail grade without a lesson plan.</p>
+        <figure class="cs-section-figure">
+          <img src="/assets/AIinsights-approach1.png" alt="First design direction: scorecard-level evaluation per PRD objectivity requirements" width="1173" height="754" decoding="async" />
+          <figcaption>The first design direction followed the PRD's objectivity requirements</figcaption>
+        </figure>
         <p>The second was more aspirational: a prompt-based approach that analyzed the manager's intent at the scorecard or question level. After alignment sessions with Product and Engineering, we landed on a hybrid — weekly, scorecard-level evaluations for the highest-traffic assets, balancing depth of analysis with low latency.</p>
-        <p>While the backend was in development, I used the time to modernize the legacy scorecard tables and modal components — ensuring the AI features would launch into a polished UI. I also ran "knowledge exchange" sessions with Data Science and Content Design to translate model outputs into an in-product guide: a library of high-performing question examples managers could copy directly into their scorecards.</p>
+        <figure class="cs-section-figure">
+          <img src="/assets/AIinsights-approach2.gif" alt="Second design direction: prompt-based question refinement" width="2000" height="1146" decoding="async" />
+          <figcaption>The second design direction allowed prompt-based question refinement</figcaption>
+        </figure>
+        <p>While the backend was in development, I used the time to modernize the legacy scorecard table and modal components — ensuring the AI features would launch into a polished UI. I also ran "knowledge exchange" sessions with Data Science and Content Design to translate model outputs into an in-product guide: a library of high-performing question examples managers could copy directly into their scorecards.</p>
         <p>When the model was ready, I defined precise interaction details — anchor scrolling between AI suggestions and text fields, and Accept/Undo/Dismiss actions treated as signals feeding a real-time feedback loop for model refinement. I also eliminated the manual weight calculation burden by implementing auto-balancing logic, removing the cognitive load of keeping scorecards totaled to 100%.</p>
       </div>
 
