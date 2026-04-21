@@ -920,8 +920,25 @@ body.page-case-study .cs-section-figure--rounded img {
   border-radius: 12px;
 }
 
-body.page-case-study .cs-section-figure--rounded {
+body.page-case-study main ul.steps + .cs-section-figure--rounded {
   margin-top: 3rem;
+}
+
+body.page-case-study .cs-section-figure-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+body.page-case-study .cs-section-figure-row > .cs-section-figure {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  body.page-case-study .cs-section-figure-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 body.page-case-study main ul.steps + p {
