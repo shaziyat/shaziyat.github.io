@@ -473,6 +473,7 @@ body.site-portfolio .nav-links a:hover {
 
 body.site-portfolio .nav-links a.active {
   color: var(--site-accent);
+  text-decoration: underline;
 }
 
 body.site-portfolio main {
